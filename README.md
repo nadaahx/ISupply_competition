@@ -11,7 +11,6 @@ This repository contains a machine learning model designed to match product name
 - [Model Training](#model-training)
 - [Prediction](#prediction)
 - [Performance](#performance)
-- [License](#license)
 
 ## Files Description
 
@@ -24,6 +23,7 @@ This repository contains the following files:
 - **`model.pkl`**: The trained machine learning model.
 - **`vectorizer.pkl`**: The TF-IDF vectorizer used for text processing.
 - **`code.ipynb`**: A Jupyter Notebook demonstrating data preprocessing, model training, and prediction steps.
+- **`ISupply competition.pdf`**: Presentation of the approach used to solve the problem.
 
 ## Requirements
 
