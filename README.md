@@ -13,15 +13,14 @@ This repository contains a machine learning model designed to match product name
 - [Performance](#performance)
 - [License](#license)
 
-
 ## Files Description
 
 This repository contains the following files:
 
-- **`Product Matching Dataset.xlsx`**: This dataset provided from the coordinators and master file.
-- **`new_master.xlsx`**: This file contains products of master file but arranged vertically in one column (Arabic and English product names).
-- **`predictions_master.xlsx`**: The output file containing predicted SKUs, similarity scores, and confidence levels of master file with extra column indicating true predections.
-- **`clean_data.xlsx`**: data after preprocessing (steps in the notebook).
+- **`Product_Matching_Dataset.xlsx`**: This dataset is provided by the coordinators and serves as the master file.
+- **`new_master.xlsx`**: This file contains products from the master file but arranged vertically in one column (Arabic and English product names).
+- **`predictions_master.xlsx`**: The output file containing predicted SKUs, similarity scores, and confidence levels of the master file, with an extra column indicating true predictions.
+- **`clean_data.xlsx`**: Processed data after preprocessing steps outlined in the notebook.
 - **`model.pkl`**: The trained machine learning model.
 - **`vectorizer.pkl`**: The TF-IDF vectorizer used for text processing.
 - **`code.ipynb`**: A Jupyter Notebook demonstrating data preprocessing, model training, and prediction steps.
@@ -45,12 +44,13 @@ pip install pandas scikit-learn joblib num2words openpyxl
 
 ## Installation
 
-1. Clone this repository to your local machine:
+Clone this repository to your local machine:
 
 ```bash
 git clone https://github.com/nadaahx/ISupply_competition.git
 cd ISupply_competition
 ```
+
 ## Usage
 
 ### Model Training
@@ -65,7 +65,8 @@ To make predictions on new data, you can use the `process_file` function provide
    - `input`: The product name or description.
    - `price`: The product price.
 
-2. Run cells with comment (Run me) then write your file name:
+2. Run the cells marked with 'Run me' comments, then specify your file name in the last cell:
+
 ```python
 file_path = "new_master.xlsx"  # Replace with the path to your file
 process_file(file_path)
