@@ -36,22 +36,11 @@ pip install pandas scikit-learn joblib num2words openpyxl
 git clone https://github.com/nadaahx/ISupply_competition.git
 cd ISupply_competition
 ```
-
-2. Ensure you have the required dataset files (`Product Matching Dataset.xlsx` and `new_master.xlsx`) in the project directory.
-
 ## Usage
 
 ### Model Training
 
-The model is already trained and saved as `model.pkl` and `vectorizer.pkl`. If you need to retrain the model, you can run the provided Jupyter Notebook (`code.ipynb`).
-
-1. Open the Jupyter Notebook:
-
-```bash
-jupyter notebook code.ipynb
-```
-
-2. Follow the steps in the notebook to load the data, preprocess it, train the model, and save the trained model and vectorizer.
+The model is already trained and saved as `model.pkl` and `vectorizer.pkl`. If you need to see the process of training the model, you can open the provided Jupyter Notebook (`code.ipynb`).
 
 ### Prediction
 
@@ -61,14 +50,13 @@ To make predictions on new data, you can use the `process_file` function provide
    - `input`: The product name or description.
    - `price`: The product price.
 
-2. Run the prediction script:
-
+2. Run cells with comment (Run me) then write your file name:
 ```python
 file_path = "new_master.xlsx"  # Replace with the path to your file
 process_file(file_path)
 ```
 
-This will generate an Excel file named `predictions_master.xlsx` with the following columns:
+This will generate an Excel file named `predictions.xlsx` with the following columns:
 - `Predicted SKU`: The predicted SKU for each product.
 - `Similarity Score`: The similarity score between the input and the predicted SKU.
 - `Confidence Level`: The confidence level of the prediction.
@@ -80,11 +68,3 @@ This will generate an Excel file named `predictions_master.xlsx` with the follow
 - **Cross-Validation**: The mean accuracy across 5-fold cross-validation is 94.3%, with a standard deviation of 0.68%.
 - **Prediction Time**: The model can process 2000 items in approximately 31 seconds.
 - **Confidence Check**: About 8.8% of the predictions require manual review (marked as Medium or Low confidence).
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-For any questions or issues, please open an issue on the GitHub repository.
