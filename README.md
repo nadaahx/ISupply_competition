@@ -4,6 +4,7 @@
 This repository contains a machine learning model designed to match product names and prices to their corresponding SKUs. The model uses a K-Nearest Neighbors (KNN) classifier with TF-IDF vectorization to achieve high accuracy in product matching.
 
 ## Table of Contents
+- [Files Description](#files-description)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -11,6 +12,19 @@ This repository contains a machine learning model designed to match product name
 - [Prediction](#prediction)
 - [Performance](#performance)
 - [License](#license)
+
+
+## Files Description
+
+This repository contains the following files:
+
+- **`Product Matching Dataset.xlsx`**: This dataset provided from the coordinators and master file.
+- **`new_master.xlsx`**: This file contains products of master file but arranged vertically in one column (Arabic and English product names).
+- **`predictions_master.xlsx`**: The output file containing predicted SKUs, similarity scores, and confidence levels of master file with extra column indicating true predections.
+- **`clean_data.xlsx`**: data after preprocessing (steps in the notebook).
+- **`model.pkl`**: The trained machine learning model.
+- **`vectorizer.pkl`**: The TF-IDF vectorizer used for text processing.
+- **`code.ipynb`**: A Jupyter Notebook demonstrating data preprocessing, model training, and prediction steps.
 
 ## Requirements
 
@@ -21,6 +35,7 @@ To run this project, you need the following Python packages:
 - joblib
 - num2words
 - openpyxl (for Excel file handling)
+- os (for file handling)
 
 You can install these packages using pip:
 
